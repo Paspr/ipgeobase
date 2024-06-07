@@ -15,6 +15,6 @@ group :test do
   gem "webmock"
 end
 
-gem 'simplecov', require: false, group: :test
-gem 'nokogiri-happymapper', require: 'happymapper'
-gem 'addressable', '~> 2.8', '>= 2.8.6'
+gem "addressable", "~> 2.8", ">= 2.8.6"
+gem "nokogiri-happymapper", require: "happymapper"
+gem "simplecov", require: false, group: :test
