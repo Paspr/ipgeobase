@@ -25,9 +25,9 @@ class TestIpgeobase < Minitest::Test
   <org>Google Public DNS</org>
   <as>AS15169 Google LLC</as>
   <query>8.8.8.8</query>'
-    stub = stub_request(:get, "http://ip-api.com/xml/8.8.8.8").
-      to_return(body: expected_output)
-    Ipgeobase.lookup('8.8.8.8')
+    stub = stub_request(:get, "http://ip-api.com/xml/8.8.8.8")
+           .to_return(body: expected_output)
+    Ipgeobase.lookup("8.8.8.8")
     assert_requested stub
   end
 end
