@@ -8,7 +8,7 @@ class TestIpgeobase < Minitest::Test
     expected_output_file = File.expand_path("./fixtures/expected_output.xml", __dir__)
     @expected_output = File.read(expected_output_file)
     stub_request(:get, "http://ip-api.com/xml/8.8.8.8")
-      .to_return(body: @expected_output, headers: { 'Content-Type' => 'application/xml'})
+      .to_return(body: @expected_output, headers: { "Content-Type" => "application/xml" })
   end
 
   def test_that_it_has_a_version_number
